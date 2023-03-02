@@ -1,0 +1,40 @@
+*,
+*::after *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(175, 163, 185);
+}
+.text-box {
+  padding-top: 60px;
+  text-align: center;
+}
+.text {
+  width: 50%;
+  padding-top: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+.search-wrapper {
+  padding: 34px 0 38px;
+}
+
+
+/*# sourceMappingURL=/JS-tasks.9ad09f98.css.map */
