@@ -1,0 +1,24 @@
+{
+  "name": "js-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /JS-task.git"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muffcata/JS-tasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muffcata/JS-tasks/issues"
+  },
+  "homepage": "https://github.com/Muffcata/JS-tasks#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
