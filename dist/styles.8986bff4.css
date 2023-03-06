@@ -1,5 +1,6 @@
 *,
-*::after *::before {
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -29,6 +30,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 41px;
+  padding-bottom: 20px;
 }
 .text {
   min-width: 280px;
@@ -53,6 +55,11 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.pokemon-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 

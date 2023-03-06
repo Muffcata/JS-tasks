@@ -1,17 +1,10 @@
-*,
-*::after,
-*::before {
+*, :after, :before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -19,45 +12,53 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 body {
-  background-color: rgb(175, 163, 185);
+  background-color: #afa3b9;
 }
+
 .text-box {
   position: relative;
 }
+
 .search-wrapper {
-  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 41px;
   padding-bottom: 20px;
+  display: flex;
 }
+
 .text {
   min-width: 280px;
   max-width: 336px;
   height: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  border: 1px solid transparent;
+  border: 1px solid #0000;
   border-radius: 8px;
+  box-shadow: 0 2px 6px #00000026;
 }
+
 .search-button {
-  position: relative;
-  right: 46px;
   width: 46px;
   height: 19px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #0000;
   border-radius: 22px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  border: 1px solid transparent;
-  background: #ffffff;
+  justify-content: center;
+  align-items: center;
   font-size: 12px;
   line-height: 1.31;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  position: relative;
+  right: 46px;
+  box-shadow: 0 2px 6px #00000026;
 }
+
 .pokemon-wrapper {
-  display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  display: flex;
 }
+
+/*# sourceMappingURL=index.4d663569.css.map */
