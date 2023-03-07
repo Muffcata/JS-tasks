@@ -60,6 +60,39 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+.footer {
+  width: 100vw;
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+  background-color: rgb(92, 82, 82);
+  color: rgb(223, 202, 202);
+}
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  padding-bottom: 10px;
+}
+.load-more {
+  width: 46px;
+  height: 19px;
+  border-radius: 22px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+  background: #ffffff;
+  font-size: 12px;
+  line-height: 1.31;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.hidden {
+  visibility: hidden;
 }
 
 

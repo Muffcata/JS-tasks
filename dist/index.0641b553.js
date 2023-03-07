@@ -557,13 +557,13 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"bNKaB":[function(require,module,exports) {
-console.log("hello");
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "fetchPokemon", ()=>fetchPokemon);
 const wrapper = document.querySelector(".pokemon-wrapper");
 const footer = document.querySelector(".footer");
 const fetchPokemon = async ()=>{
-    return await fetch("https://api.pokemontcg.io/v2/cards?" + new URLSearchParams({
-        pageSize: 50
-    })).then((response)=>response.json()).then((data)=>generatorCards(data));
+    return await fetch("https://api.pokemontcg.io/v2/cards ").then((response)=>response.json()).then((data)=>generatorCards(data));
 };
 const generatorSingleCard = (singleCardData)=>{
     const cardImage = document.createElement("img");
@@ -573,7 +573,11 @@ const generatorSingleCard = (singleCardData)=>{
     cardImage.setAttribute("onerror", "this.style = 'display:none;"); //card is not hidden, if error
     wrapper.appendChild(cardImage);
 };
-const generateStrongestInfo = (data)=>{};
+const generateStrongestInfo = (data)=>{
+    let resString = "";
+    data.forEach((e, i)=>resString += i === data.length - 1 ? `and ${e.name} with ${e.hp} hit points` : `${e.name} with ${e.hp} hit points,`);
+    footer.textContent = `Strongest Pokemons are: ${resString}`;
+};
 //generator cards - el = card
 function generatorCards(data) {
     //   data.data.forEach((el) => {
@@ -581,7 +585,7 @@ function generatorCards(data) {
     //   });
     //Filter Cards
     const strongPokemonsOnly = data.data.filter((el)=>//exchange - string on number - metod parseInt
-        parseInt(el.hp) >= 100);
+        parseInt(el.hp) >= 20);
     //SORT Cards and next show it
     //from 100 to next x hp - ascending
     strongPokemonsOnly.sort((a, b)=>//We take 2 cards and substract from each other
@@ -589,7 +593,7 @@ function generatorCards(data) {
     strongPokemonsOnly.forEach((el)=>{
         generatorSingleCard(el);
     });
-    //REDUCE
+    //REDUCE (example to exercise)
     const newDataObjects = strongPokemonsOnly.reduce((acc, val)=>{
         //deconstruction - take value
         const { name , hp , types  } = val;
@@ -603,7 +607,42 @@ function generatorCards(data) {
     generateStrongestInfo(newDataObjects);
     console.log(newDataObjects);
 }
-fetchPokemon();
+fetchPokemon(); // searchForm.addEventListener("submit", (event) => {
+ //   event.preventDefault();
+ //   // Get the search query from the input element
+ //   const query = searchInput.value;
+ //   return;
+ // });
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["lKzq4","bNKaB"], "bNKaB", "parcelRequire08c3")
 
